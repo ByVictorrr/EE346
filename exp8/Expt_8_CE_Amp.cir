@@ -1,0 +1,20 @@
+* BJT Common Emitter AMplifier
+Vcc VCC 0 DC ##V
+Vin IN 0 sin(0 1.1 1K)
+*
+Rb1 VCC B ##kohms
+Rb2 B 0 ##kohms
+Cb In B 10uF
+RL VCC Out 4.7kohms
+Re E 0 ##kohms
+Q1 Out B E Modl
+* C B E Model Name
+
+.MODEL mod1 NPN(BF=100 BR=3.9 IS=2.7E-14 RB=30 RC=1.9
++ RE=0.1 VA=317 TF=0.3ns TR=144ns CJE23.6pF PE=0.88
++ CJC=9.44pF PC=.56)
+.Temp=25
+.OP
+.TRAN 10us 2000us 0 2us
+.PROBE
+.END
