@@ -1,0 +1,12 @@
+* Z:\home\victor\EE346\exp7p2.asc
+V1 N002 0 V
+Q1 N001 N004 0 0 NPN
+R1 N001 N002 100k
+R2 NC_01 N003 68k
+V2 N003 0 V
+.model NPN NPN
+.model PNP PNP
+.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.bjt
+.dc V1 0 16 
+.backanno
+.end

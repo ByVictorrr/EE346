@@ -1,0 +1,11 @@
+* JFET Current vs. gate Voltage characteristic
+Vgs 1 0
+Vds 2 0 10
+JF 2 1 0 J1
+* D G S Model
+
+.model J1 NJF CGS=0.80p CGD=4.0p VTO=-2.5 BETA=.555m
+.DC Vgs 1 -.02 -3
+*	start stop step
+.probe
+.end

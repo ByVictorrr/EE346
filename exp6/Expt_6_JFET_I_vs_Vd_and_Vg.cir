@@ -1,0 +1,11 @@
+* JFET Nested Current vs. Voltage characteristic
+Vgs 1 0
+Vds 2 0
+JF 2 1 0 J1
+* D G S Model
+
+.model J1 NJF CGS=0.80p CGD=4.0p VTO=-2.5 BETA=.555m
+.DC Vds 0 16 0.05 Vgs 0.5 -3 0
+*nested sweep
+.probe
+.end

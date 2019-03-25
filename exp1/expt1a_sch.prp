@@ -1,0 +1,13 @@
+
+VDD 1 0
+
+R1 1 2 100
+D1 2 0 D1
+
+.MODEL D1 D RS=1 IS=1E-14
+
+.DC VDD 0 2 0.01
+
+.PROBE
+.PRINT DC I(D1) I(R1) V(2)
+.END
